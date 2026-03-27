@@ -1,0 +1,6 @@
+crewai
+crewai-tools
+python-dotenv
+duckduckgo-search
+langchain-community
+beautifulsoup4
