@@ -1,13 +1,13 @@
 # Mini-Assignment 3: CrewAI Basics
 
 ## 1. What business problem your crew addresses
-*(Guideline: Write about what specific problem this multi-agent system solves. For example, mention the challenge of manually parsing through massive volumes of NCAA data to predict tournament outcomes, and how an automated, fast, data-driven pipeline aids sports media publishers (like ESPN) in creating high-quality, statistical, narrative-driven content efficiently.)*
+Basketball analytiics or sports analytics in general is often fun to follow, but it can be really time consuming to keep up with all the latest data. The CrewAI Multi-agent system enables a fast and automated pipeline to gather and analyse NCAA D1 Basketball statistics and insights, and predict the rankings of the top teams in a structured and conise format. This reduces the hassle of having to manually go through multiple sites and compile information, while ensuring accurate and quality stats are used. 
 
 ## 2. How your 3 agents work together
-*(Guideline: Write one paragraph on how your 3 agents collaborate. Explain how the workflow passes sequentially from the **Researcher** (who gathers the raw sports data) to the **Analyst** (who filters the data using a quantitative lens to pick the Final Four) and finally to the **Writer** (who turns the statistical briefing into a polished, compelling journalistic article).)*
+Firstly, the Researcher agent is tasked with gathering the raw sports data from the web using the web_search_tool and read_website_content tool. Then, the Analyst agent is tasked with analysing the data gathered by the Researcher agent and picking the top 3 teams in a structured and conise format. Finally, the Writer agent is tasked with turning the data gathered by the Researcher agent and the analysis done by the Analyst agent into a polished, compelling journalistic article.
 
 ## 3. What challenges you encountered and how you solved them
-*(Guideline: Reflect on the process. Describe what challenges you faced when building or running this crew. Did you face issues with API keys? Was defining the specific constraints in the prompts challenging? How did you navigate them?)*
+It was quite challenging building this project. The first challenge I encountered was that information generated from the researcher agent is not up-to-date and is often still in the 2025 season. I eventually asked Gemini to build a custom tool to scrape the web for the most up-to-date information, which solved this problem. Another challenge was the tools retrieving too much data from the net which ended up sending too much information to the analyst agent, causing it to crash. I solved this problem by minimizing the number of teams the researcher agent had to look up, and eventually letting the program to run smoothly.
 
 ## 4. One thing you would change if you had more time
-*(Guideline: Detail one major change or addition you would implement. For instance, would you add a specialized web-scraping tool to the Researcher so it pulls live data? Would you add an Editor agent to review the Writer's draft?)*
+I would add an editor agent to review the writer's draft to ensure that the information is accurate and that the article is well-written. Essentially adding one more agent for overall writing and program quality assurance.
