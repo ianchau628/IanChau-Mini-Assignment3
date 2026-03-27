@@ -4,3 +4,4 @@ python-dotenv
 duckduckgo-search
 langchain-community
 beautifulsoup4
+requests
